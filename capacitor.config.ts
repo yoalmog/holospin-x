@@ -9,9 +9,7 @@ const config: CapacitorConfig = {
 
   webDir: "dist",
 
-  server: {
-    androidScheme: "https"
-  }
+  bundledWebRuntime: false
 
 };
 
