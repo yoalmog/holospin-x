@@ -6,131 +6,125 @@
 
 body{
   background:#020617;
+  color:white;
+  font-family:sans-serif;
   overflow:hidden;
-  font-family:
-  Inter,
-  sans-serif;
 }
 
-.app{
+.layout{
+  display:flex;
   width:100vw;
   height:100vh;
-  position:relative;
-  color:white;
-  overflow:hidden;
 }
 
-.bg{
+.sidebar{
 
-  position:absolute;
-  inset:0;
+  width:240px;
+
+  background:#0f172a;
+
+  border-right:
+  1px solid #1e293b;
+
+  padding:20px;
+}
+
+.logo{
+
+  font-size:24px;
+  font-weight:bold;
+
+  margin-bottom:40px;
+
+  color:#00ffff;
+}
+
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.menuItem{
+
+  display:flex;
+  gap:12px;
+  align-items:center;
+
+  padding:16px;
+
+  border-radius:16px;
+
+  color:white;
+
+  text-decoration:none;
+
+  background:#111827;
+}
+
+.menuItem.active{
 
   background:
-  radial-gradient(
-    circle at center,
-    #0f172a 0%,
-    #020617 65%
+  linear-gradient(
+    135deg,
+    #06b6d4,
+    #8b5cf6
   );
-
 }
 
-.header{
+.content{
+  flex:1;
+  overflow:auto;
+}
 
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
+.page{
+  padding:30px;
+}
+
+.page h1{
+  margin-bottom:30px;
+}
+
+.cards{
+  display:flex;
+  gap:20px;
+}
+
+.card{
+
+  flex:1;
+
+  background:#111827;
 
   padding:24px;
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  border-radius:24px;
 
-  z-index:10;
+  border:
+  1px solid #1e293b;
 }
 
-.brand{
-  display:flex;
-  gap:15px;
-  align-items:center;
-}
-
-.brand h1{
-  font-size:28px;
-  letter-spacing:3px;
-}
-
-.brand span{
+.card span{
+  display:block;
+  margin-top:10px;
   color:#94a3b8;
-  font-size:12px;
 }
 
-.logoGlow{
-
-  width:20px;
-  height:20px;
-
-  border-radius:50%;
-
-  background:#00ffff;
-
-  box-shadow:
-  0 0 20px #00ffff,
-  0 0 40px #00ffff;
-
+.card h2{
+  margin-top:10px;
+  font-size:40px;
+  color:#00ffff;
 }
 
-.status{
+.hero{
 
-  display:flex;
-  gap:8px;
-  align-items:center;
+  width:400px;
+  height:400px;
 
-  padding:
-  10px 18px;
+  position:relative;
 
-  border-radius:999px;
-
-  backdrop-filter:
-  blur(20px);
-
-  font-size:13px;
-}
-
-.online{
-
-  background:
-  rgba(0,255,140,0.1);
-
-  border:
-  1px solid #00ff88;
-
-  color:#00ff88;
-}
-
-.offline{
-
-  background:
-  rgba(255,0,80,0.1);
-
-  border:
-  1px solid #ff0055;
-
-  color:#ff0055;
-}
-
-.reactorWrap{
-
-  position:absolute;
-  top:50%;
-  left:50%;
-
-  transform:
-  translate(-50%,-55%);
-
-  width:320px;
-  height:320px;
+  margin:auto;
+  margin-top:60px;
 
   display:flex;
   justify-content:center;
@@ -148,36 +142,20 @@ body{
 }
 
 .r1{
-
   width:180px;
   height:180px;
-
-  animation:
-  spin 8s linear infinite;
+  animation:spin 8s linear infinite;
 }
 
 .r2{
-
-  width:250px;
-  height:250px;
-
-  border-color:
-  rgba(255,0,255,0.25);
-
-  animation:
-  spinReverse 12s linear infinite;
+  width:260px;
+  height:260px;
+  animation:spinReverse 12s linear infinite;
 }
 
 .r3{
-
-  width:320px;
-  height:320px;
-
-  border-color:
-  rgba(255,255,255,0.08);
-
-  animation:
-  pulse 3s infinite;
+  width:360px;
+  height:360px;
 }
 
 .core{
@@ -194,181 +172,90 @@ body{
     #8b5cf6
   );
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
   box-shadow:
-  0 0 60px #00ffff,
-  0 0 120px #8b5cf6;
+  0 0 60px #00ffff;
 }
 
-.coreInner{
+.visualizer{
 
-  width:90px;
-  height:90px;
-
-  border-radius:50%;
+  height:400px;
 
   display:flex;
-  justify-content:center;
-  align-items:center;
-
-  background:#020617;
-}
-
-.metrics{
-
-  position:absolute;
-
-  top:58%;
-  left:50%;
-
-  transform:
-  translateX(-50%);
-
-  width:92%;
-
-  display:flex;
-  gap:14px;
-}
-
-.metric{
-
-  flex:1;
-
-  background:
-  rgba(15,23,42,0.7);
-
-  border:
-  1px solid rgba(255,255,255,0.08);
-
-  border-radius:24px;
-
-  padding:18px;
-
-  backdrop-filter:
-  blur(20px);
-}
-
-.metric label{
-
-  display:block;
-
-  margin-top:10px;
-
-  color:#94a3b8;
-
-  font-size:12px;
-}
-
-.metric h2{
-
-  margin-top:8px;
-
-  color:#00ffff;
-
-  font-size:28px;
-}
-
-.panel{
-
-  position:absolute;
-
-  bottom:0;
-  left:0;
-
-  width:100%;
-
-  padding:24px;
-
-  border-top:
-  1px solid rgba(255,255,255,0.08);
-
-  background:
-  rgba(2,6,23,0.85);
-
-  backdrop-filter:
-  blur(20px);
-}
-
-.panelTitle{
-
-  display:flex;
-  gap:10px;
-  align-items:center;
-
-  margin-bottom:24px;
-
-  color:#94a3b8;
-
-  font-size:13px;
-}
-
-.sliderBlock{
-  margin-bottom:30px;
-}
-
-.sliderTop{
-
-  display:flex;
-  justify-content:space-between;
-
-  margin-bottom:14px;
-}
-
-.sliderTop strong{
-  color:#00ffff;
-}
-
-input[type=range]{
-  width:100%;
-}
-
-.modeGrid{
-
-  display:grid;
-
-  grid-template-columns:
-  1fr 1fr;
+  align-items:flex-end;
 
   gap:14px;
 }
 
-.modeGrid button{
+.bar{
 
-  border:none;
+  width:50px;
+  height:200px;
 
-  padding:18px;
-
-  border-radius:22px;
-
-  display:flex;
-  gap:10px;
-  align-items:center;
-  justify-content:center;
-
-  background:#111827;
-
-  color:white;
-
-  font-size:14px;
-
-  border:
-  1px solid rgba(255,255,255,0.08);
-}
-
-.modeGrid button.active{
+  border-radius:14px;
 
   background:
   linear-gradient(
-    135deg,
+    to top,
     #06b6d4,
     #8b5cf6
   );
 
-  box-shadow:
-  0 0 30px rgba(139,92,246,0.5);
+  animation:
+  bounce 1s infinite;
+}
+
+.upload{
+
+  height:300px;
+
+  border:
+  2px dashed #334155;
+
+  border-radius:30px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.devices{
+  display:flex;
+  gap:20px;
+}
+
+.device{
+
+  flex:1;
+
+  padding:24px;
+
+  border-radius:24px;
+}
+
+.online{
+  background:#052e16;
+}
+
+.offline{
+  background:#3f0d1d;
+}
+
+.settings{
+  display:flex;
+  gap:20px;
+}
+
+.settings button{
+
+  padding:20px 30px;
+
+  border:none;
+
+  border-radius:20px;
+
+  background:#111827;
+
+  color:white;
 }
 
 @keyframes spin{
@@ -395,18 +282,18 @@ input[type=range]{
 
 }
 
-@keyframes pulse{
+@keyframes bounce{
 
   0%{
-    transform:scale(1);
+    height:80px;
   }
 
   50%{
-    transform:scale(1.03);
+    height:300px;
   }
 
   100%{
-    transform:scale(1);
+    height:80px;
   }
 
 }
