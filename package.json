@@ -5,27 +5,30 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build"
   },
   "dependencies": {
-    "@capacitor/android": "^7.0.0",
-    "@capacitor/core": "^7.0.0",
-    "@react-three/drei": "9.122.0",
-    "@react-three/fiber": "8.18.0",
-    "@react-three/postprocessing": "2.16.3",
-    "framer-motion": "^12.15.0",
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/cli": "^8.3.4",
+    "@capacitor/core": "^8.3.4",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/postprocessing": "^2.16.2",
+    "framer-motion": "^11.11.17",
+    "gifuct-js": "^2.1.2",
+    "leva": "^0.10.0",
     "lucide-react": "^1.16.0",
-    "postprocessing": "^6.37.3",
+    "motion": "^12.39.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.15.1",
-    "three": "^0.170.0"
+    "recharts": "^3.8.1",
+    "three": "^0.171.0",
+    "zustand": "^5.0.13"
   },
   "devDependencies": {
-    "@capacitor/cli": "^8.3.4",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "typescript": "^6.0.3",
-    "vite": "^5.4.10"
+    "vite": "^6.0.1"
   }
 }
